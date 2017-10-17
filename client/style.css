@@ -1,0 +1,30 @@
+html, body{
+    background: #DFDFDF;
+    height: 100%;
+}
+
+textarea {
+    background: #C7C7C7;
+
+}
+
+#text {
+    position: absolute;
+    color: #151515;
+    width: 800px;
+    height: 100%;
+    background: rgb(246, 246, 246);
+    left: 15%;
+    top: 50px;
+    overflow: scroll;
+}
+#post {
+    border: ridge;
+    border-color: #126C76;
+   border-radius: 20px;
+   border-width: 2px;
+}
+#compbtn {
+    position: absolute;
+    left: 45%;
+}

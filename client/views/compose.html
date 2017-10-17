@@ -1,0 +1,21 @@
+<div id="text">
+    <div>
+        <input type="text" placeholder="Title" ng-model="newTitle"></input>
+    </div>
+    <div>
+        <select ng-model="newCategoryId">
+    <option value="">Category</option>
+    <option value="{{ c.id }}" ng-repeat="c in category">{{ c.name }}</option>
+</select>
+        <select ng-model="newUserId">
+    <option value="">User</option>
+    <option value="{{ u.id }}" ng-repeat="u in user">{{ u.firstname }} {{ u.lastname }}</option>
+</select>
+    </div>
+    <div>
+        <textarea cols="50" rows="5" ng-model="newContent"></textarea>
+    </div>
+    <div>
+        <button ng-click="createPost()">Save</button>
+    </div>
+</div>

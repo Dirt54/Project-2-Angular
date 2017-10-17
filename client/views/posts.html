@@ -1,0 +1,15 @@
+
+<button id="compbtn" ng-click="composePage()">Compose</button>
+<div id="text">
+    <div ng-repeat="p in post" id="post">
+        
+                <button id="compbtn" ng-click="singleRead(p.id)">Read</button>
+            <h2>{{ p.title }}</h2>
+            <p cols="50" rows="10">{{ p.content }}</p>
+            <h4>{{ p.catname }}</h4>
+            <h4>Written By: {{ p.usfn }} {{ p.usln }}</h4>
+            <h5>{{ p.createdAt | date: 'short' }}</h5>
+
+    
+    </div>
+</div>

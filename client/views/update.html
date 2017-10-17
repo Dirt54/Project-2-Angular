@@ -1,0 +1,19 @@
+<div id="text">
+        <div>
+        <input type="text" placeholder="Title" ng-model="post.title"></input>
+        </div>
+        <div>
+        <select ng-model="newcategoryid">
+            <option value="">Category</option>
+            <option value="{{ c.id }}" ng-repeat="c in category">{{ c.name }}</option>
+        </select>
+        </div>
+        <div>
+            <p cols="50" rows="5" ng-model="post.content"></p>
+        </div>
+        <h4>{{ post.usfn }} {{ post.usln }}</h4>
+        <h5>{{ post.createdAt | date: 'short' }}</h5>
+        <div>
+            <button ng-click="updatePost()">Update</button>
+        </div>
+        </div>

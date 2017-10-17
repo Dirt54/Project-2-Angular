@@ -1,0 +1,27 @@
+<div id="text">
+    <div>
+        <input type="text" placeholder="firstname" ng-model="newFirstname"></input>
+        <input type="text" placeholder="lastname" ng-model="newLastname"></input>
+    </div>
+    <div>
+      <input type="text" placeholder="email" ng-model="newEmail"></input>
+    </div>
+    <div>
+        <input type="text" placeholder="password" ng-model="newPassword"></input>
+    </div>
+    <div>
+            <input type="text" placeholder="role" ng-model="newRole"></input>
+    </div>
+    <div>
+        <button ng-click="createUsers()">Create User</button>
+    </div>
+</div>
+
+<div>
+        <div ng-repeat="u in user">      
+                <h2>{{ u.firstname }}</h2>
+                <h2>{{ u.lastname }}</h2>    
+                <h4>{{ u.email }}</h4>   
+                <h5>{{ u.role }}</h5>
+        </div>
+    </div>
