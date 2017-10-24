@@ -183,4 +183,20 @@ angular.module('blog.controllers', [])
             description: 'Log into your account'    
         });
 
+    }])
+
+    .controller('donationController', ['$scope', function($scope) {
+        var elements = stripe.elements();
+        var card = elements.create('card');    
+        card.mount('#card-field');
+        
+        $scope.process = function() {        
+            stripe.createToken(card).then(function(result) {
+                if (result.error) {
+                    $scope.error = result.error.message;            
+                } else {
+                    // result.token is the actual token to send to our server            
+                }        
+            });    
+        }
     }]);

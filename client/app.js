@@ -6,6 +6,10 @@ angular.module('myApp', ['ngRoute', 'ngResource', 'blog.controllers', 'blog.fact
         templateUrl: 'views/posts.html',
         controller: 'postsController'
     })
+    .when('/donate', {
+        templateUrl: 'views/donations.html',
+        controller: 'donationController'
+    })
     .when('/compose', {
         templateUrl: 'views/compose.html',
         controller: 'composeController'
